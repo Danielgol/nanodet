@@ -70,6 +70,8 @@ def main(args):
     logger.info("Setting up data...")
     train_dataset = build_dataset(cfg.data.train, "train")
     val_dataset = build_dataset(cfg.data.val, "test")
+    
+    print(train_dataset, cfg.data.train)
 
     evaluator = build_evaluator(cfg.evaluator, val_dataset)
 
