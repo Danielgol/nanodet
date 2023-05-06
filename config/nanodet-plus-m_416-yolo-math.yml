@@ -66,8 +66,8 @@ class_names:  &class_names ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+
 data:
   train:
     name: YoloDataset
-    img_path: /kaggle/working/nanodet/custom/images/train
-    ann_path: /kaggle/working/nanodet/custom/labels/train
+    img_path: custom/images/train
+    ann_path: custom/images/train
     class_names: *class_names
     input_size: [416,416] #[w,h]
     keep_ratio: False
@@ -85,8 +85,8 @@ data:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
   val:
     name: YoloDataset
-    img_path: /kaggle/working/nanodet/custom/images/val
-    ann_path: /kaggle/working/nanodet/custom/labels/val
+    img_path: custom/images/val
+    ann_path: custom/images/val
     class_names: *class_names
     input_size: [416,416] #[w,h]
     keep_ratio: False
