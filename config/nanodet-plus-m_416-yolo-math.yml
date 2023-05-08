@@ -92,6 +92,15 @@ data:
     keep_ratio: False
     pipeline:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
+  test:
+    name: YoloDataset
+    img_path: custom/images/test
+    ann_path: custom/images/test
+    class_names: *class_names
+    input_size: [416,416] #[w,h]
+    keep_ratio: False
+    pipeline:
+      normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
 device:
   gpu_ids: [0]
   workers_per_gpu: 8
