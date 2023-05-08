@@ -40,6 +40,7 @@ def parse_args():
     )
     parser.add_argument("--config", type=str, help="model config file(.yml) path")
     parser.add_argument("--model", type=str, help="ckeckpoint file(.ckpt) path")
+    parser.add_argument("--test", default=False, type=bool, help="Check test metrics")
     args = parser.parse_args()
     return args
 
@@ -61,7 +62,7 @@ def main(args):
     logger.info("Setting up data...")
     
     val_dataset = []
-    if args.task == "test":
+    if args.test == True:
         logger.info("Loading test set...")
         val_dataset = build_dataset(cfg.data.test, args.task)
     else:
