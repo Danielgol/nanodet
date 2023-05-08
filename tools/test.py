@@ -59,7 +59,15 @@ def main(args):
     cfg.update({"test_mode": args.task})
 
     logger.info("Setting up data...")
-    val_dataset = build_dataset(cfg.data.val, args.task)
+    
+    val_dataset = []
+    if args.task == "test":
+        logger.info("Loading test set...")
+        val_dataset = build_dataset(cfg.data.test, args.task)
+    else:
+        logger.info("Loading val set...")
+        val_dataset = build_dataset(cfg.data.val, args.task)
+    
     val_dataloader = torch.utils.data.DataLoader(
         val_dataset,
         batch_size=cfg.device.batchsize_per_gpu,
