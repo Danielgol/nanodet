@@ -67,7 +67,7 @@ data:
   train:
     name: YoloDataset
     img_path: custom/images/train
-    ann_path: custom/images/train
+    ann_path: custom/labels/train
     class_names: *class_names
     input_size: [320,320] #[w,h]
     keep_ratio: False
@@ -86,7 +86,7 @@ data:
   val:
     name: YoloDataset
     img_path: custom/images/val
-    ann_path: custom/images/val
+    ann_path: custom/labels/val
     class_names: *class_names
     input_size: [320,320] #[w,h]
     keep_ratio: False
@@ -95,7 +95,7 @@ data:
   test:
     name: YoloDataset
     img_path: custom/images/test
-    ann_path: custom/images/test
+    ann_path: custom/labels/test
     class_names: *class_names
     input_size: [320,320] #[w,h]
     keep_ratio: False
