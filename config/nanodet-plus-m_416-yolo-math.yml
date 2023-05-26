@@ -107,7 +107,7 @@ device:
   batchsize_per_gpu: 64
 schedule:
 #  resume:
-  load_model: workspace/nanodet-plus-m_416/model_last.ckpt
+  load_model: pretraineds/nanodet-plus-m_416_checkpoint.ckpt
   optimizer:
     name: AdamW
     lr: 0.001
