@@ -69,7 +69,7 @@ data:
     img_path: custom/images/train
     ann_path: custom/images/train
     class_names: *class_names
-    input_size: [416,416] #[w,h]
+    input_size: [320,320] #[w,h]
     keep_ratio: False
     pipeline:
       perspective: 0.0
@@ -88,7 +88,7 @@ data:
     img_path: custom/images/val
     ann_path: custom/images/val
     class_names: *class_names
-    input_size: [416,416] #[w,h]
+    input_size: [320,320] #[w,h]
     keep_ratio: False
     pipeline:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
@@ -97,7 +97,7 @@ data:
     img_path: custom/images/test
     ann_path: custom/images/test
     class_names: *class_names
-    input_size: [416,416] #[w,h]
+    input_size: [320,320] #[w,h]
     keep_ratio: False
     pipeline:
       normalize: [[103.53, 116.28, 123.675], [57.375, 57.12, 58.395]]
