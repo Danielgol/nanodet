@@ -48,7 +48,7 @@ if __name__ == '__main__':
       if not name.endswith(".png"):
           continue
 
-      path = image_path+name
+      path = os.path.join(image_path,name)
       img = cv2.imread(path)
 
       predictor = Predictor(cfg, model_path, logger, device=device)
