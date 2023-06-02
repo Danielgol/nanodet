@@ -2,7 +2,6 @@ import os
 import cv2
 import torch
 import argparse
-from torch import inf
 from demo.demo import Predictor
 from nanodet.util import cfg, load_config, Logger
 
